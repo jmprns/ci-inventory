@@ -14,5 +14,9 @@ $route['category/edit/(:num)']['get'] = 'categories/edit/$1';
 $route['category/delete/(:num)']['post'] = 'categories/destroy/$1';
 
 
-
-
+// SUPPLIERS
+$route['supplier']['get'] = 'suppliers/index';
+$route['supplier']['post'] = 'suppliers/store';
+$route['supplier/update/(:num)']['post'] = 'suppliers/update/$1';
+$route['supplier/edit/(:num)']['get'] = 'suppliers/edit/$1';
+$route['supplier/delete/(:num)']['post'] = 'suppliers/destroy/$1';

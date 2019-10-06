@@ -7,7 +7,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0
+        <b>Version</b> 1.0 || <small>Page rendered in {elapsed_time} seconds.</small> 
 	  </div>
 	  
 	  <strong>Developed By: <a target="_new" href="https://jmprns.netlify.com">JMPRNS</a></strong>
@@ -38,11 +38,11 @@
   $(function () {
     $('#dataTables').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
 </script>
