@@ -2,9 +2,20 @@
 	<div class="alert alert-success alert-dismissible">
     	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <h4><i class="icon fa fa-check"></i> Success!</h4>
-		Category has been successfully added.
+		<?php echo $this->session->flashdata('success'); ?>
     </div>
 <?php endif; ?>
+
+
+<?php if($this->session->flashdata('error')): ?>
+	<div class="alert alert-danger alert-dismissible">
+    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Ooooops!</h4>
+		<?php echo $this->session->flashdata('error'); ?>
+    </div>
+<?php endif; ?>
+
+
 <div class="row">
 
 	<div class="col-lg-9">
@@ -29,7 +40,10 @@
 							<td><?php echo $x++; ?></td>
 							<td><?php echo $category['name']; ?></td>
 							<td>
-								<button class="btn btn-flat btn-xs bg-olive"><i class="fa fa-pencil"></i></button>
+								<form method="POST" action="<?php base_url(); ?>category/delete/<?php echo $category['id']; ?>">
+								<a href="<?php echo base_url(); ?>category/edit/<?php echo $category['id']; ?>" class="btn btn-flat btn-xs bg-orange"><i class="fa fa-pencil"> Edit</i></a>
+								<button type="submit" class="btn btn-flat btn-xs bg-navy"><i class="fa fa-trash"> Delete</i></button>
+								</form>
 							</td>
 						</tr>
 					<?php endforeach; ?>

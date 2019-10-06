@@ -24,6 +24,21 @@ class Category extends CI_Model {
 	{
 		return $this->db->insert('categories', $data);
 	}
+
+	public function update($id, $data)
+	{
+		$this->db->where('id', $id);
+		$this->db->update('categories', $data);
+		return true;
+
+	}
+
+	public function delete($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete('categories');
+		return true;
+	}
                         
                    
 }
