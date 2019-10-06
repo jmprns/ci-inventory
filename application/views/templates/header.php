@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Top Navigation</title>
+  <title>CI Inventory | <?= $html_title; ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="<?php echo asset_url(); ?>vendor/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo asset_url(); ?>vendor/ionicons/css/ionicons.min.css">
+	<!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo asset_url(); ?>vendor/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo asset_url(); ?>css/style.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -120,18 +122,12 @@
   </header>
   <!-- Full Width Column -->
   <div class="content-wrapper">
-    <div class="container">
+    <div class="container-fluid">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Top Navigation
-          <small>Example 2.0</small>
+          <?= $page_title; ?>
         </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Layout</a></li>
-          <li class="active">Top Navigation</li>
-        </ol>
       </section>
 
       <!-- Main content -->

@@ -8,6 +8,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 // CATEGORIES
 $route['category']['get'] = 'categories/index';
+$route['category']['post'] = 'categories/store';
 
 
 
